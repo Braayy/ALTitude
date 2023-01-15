@@ -1,0 +1,10 @@
+[gd_resource type="Theme" load_steps=3 format=2]
+
+[ext_resource path="res://Fonts/HackbotFreeTrial-8MgA2.otf" type="DynamicFontData" id=1]
+
+[sub_resource type="DynamicFont" id=1]
+size = 80
+font_data = ExtResource( 1 )
+
+[resource]
+default_font = SubResource( 1 )

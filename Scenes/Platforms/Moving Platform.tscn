@@ -1,0 +1,30 @@
+[gd_scene load_steps=5 format=2]
+
+[ext_resource path="res://Scripts/Moving Platform.gd" type="Script" id=1]
+
+[sub_resource type="Gradient" id=1]
+offsets = PoolRealArray( 1 )
+colors = PoolColorArray( 1, 1, 1, 1 )
+
+[sub_resource type="GradientTexture" id=2]
+gradient = SubResource( 1 )
+width = 1
+
+[sub_resource type="RectangleShape2D" id=3]
+
+[node name="Moving Platform" type="KinematicBody2D" groups=["platforms"]]
+scale = Vector2( 9, 1 )
+collision_layer = 2
+collision_mask = 0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_group_": true
+}
+speeds = [ 25.0, 50.0, 75.0, 100.0 ]
+
+[node name="Sprite" type="Sprite" parent="."]
+scale = Vector2( 20, 20 )
+texture = SubResource( 2 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource( 3 )
